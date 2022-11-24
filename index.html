@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function padString(string, resultLength, symbol, toStart = false) {
+        var diff = resultLength - string.length;
+        if (diff <= 0) {
+            return string;
+        }
+        var symbolAcc = '';
+        for (var index = 0; index < diff; index++) {
+            symbolAcc += symbol;
+        }
+        return toStart ? symbolAcc + string : string + symbolAcc;
+        }
+        var result = padString('Ivan', 7, '*', true);
+        console.log(result);
+    </script>
+</body>
+</html>
